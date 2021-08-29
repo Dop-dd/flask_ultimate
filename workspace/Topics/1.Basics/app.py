@@ -65,7 +65,7 @@ def processjson():
     location = data['location']
     randomlist = data['randomlist']
 
-    return jsonify({'result' : 'Succhss', 'name': name, 'location': location,
+    return jsonify({'result' : 'Success', 'name': name, 'location': location,
                     'randomkeyinlist': randomlist[1]})
 
 if __name__ == '__main__':
