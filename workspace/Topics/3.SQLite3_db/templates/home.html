@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+    {% block content %}
+  
+    <h2> hi {{ name }}, you are on the home page </h2>
+
+    <h2>Database results</h2>
+    {% for item in results %}
+    <h3>ID: {{ item.id}} Name:{{ item.name}} Location: {{ item.location}}</h3>
+    {% endfor %}
+
+    {% if display %}
+    <h4>This has been displayed</h4>
+    {% else %}
+    <h4>This has NOT been displayed</h4>
+    {% endif %}
+
+    {% for x in mylist %}
+    <h3>{{ x }}</h3>
+    {% endfor %}
+<!---
+    <img src="{{ url_for('static', filename='img/ESP32_pinout.png') }}">
+-->
+    {% endblock %}
